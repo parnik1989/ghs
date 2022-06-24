@@ -1,0 +1,33 @@
+{
+  "sampleTypes": [
+    {"id":"1","code":"SERUM","value":"SERUM","detail":""},
+    {"id":"2","code":"URINE","value":"URINE","detail":""},
+    {"id":"3","code":"EDTAB","value":"EDTA BLOOD","detail":""},
+    {"id":"4","code":"CPLSM","value":"CITRATED PLASMA","detail":""},
+    {"id":"5","code":"CSFXX","value":"CSF","detail":""},
+    {"id":"6","code":"PUSXX","value":"PUS","detail":""},
+    {"id":"7","code":"BDFLD","value":"BODY FLUID","detail":""},
+    {"id":"8","code":"SPTUM","value":"SPUTUM","detail":""},
+    {"id":"9","code":"TISUE","value":"TISSUE","detail":""},
+    {"id":"10","code":"TSWAB","value":"THROAT SWAB","detail":""},
+    {"id":"11","code":"HPRNE","value":"HEPARINE","detail":""},
+    {"id":"12","code":"FPLSM","value":"FLUORIDE PLASMA","detail":""},
+    {"id":"13","code":"BDSHG","value":"BREAST DISCHARGE","detail":""},
+    {"id":"14","code":"BSWAB","value":"BRONCHOALVEOLAR SWAB","detail":""},
+    {"id":"15","code":"CMILK","value":"COW MILK","detail":""},
+    {"id":"16","code":"ESWAB","value":"EAR SWAB","detail":""},
+    {"id":"17","code":"DRFLD","value":"DRAIN FLUID","detail":""},
+    {"id":"17","code":"STOOL","value":"STOOL","detail":""},
+    {"id":"17","code":"SSCRP","value":"SKIN SCRAPPINGS","detail":""},
+    {"id":"17","code":"LIQUD","value":"LIQUID","detail":""},
+    {"id":"17","code":"MMILK","value":"MOTHER MILK","detail":""},
+    {"id":"17","code":"NDSHG","value":"NASAL DISCHARGE","detail":""},
+    {"id":"17","code":"NSWAB","value":"NASAL SWAB","detail":""},
+    {"id":"17","code":"BCTUB","value":"BLOOD CCFDNA TUBE","detail":""},
+    {"id":"17","code":"OSWAB","value":"OT SWAB","detail":""},
+    {"id":"17","code":"VSWAB","value":"VAGINAL SWAB","detail":""}
+    {"id":"17","code":"SLIDE","value":"SLIDE","detail":""},
+    {"id":"17","code":"SEMEN","value":"SEMEN","detail":""},
+    {"id":"17","code":"SWABX","value":"SWAB","detail":""}
+  ]
+}

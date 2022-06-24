@@ -1,0 +1,77 @@
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{dashboardTitle}}</h1>
+        </div>
+    </div>
+</div>
+<div class="main-body">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card stat-rev-card card_bcg">
+                <div class="card-body">
+                    <img src="../../../assets/icons/indian-rupee-sign-solid.svg">
+                    <h2 class="card-title">{{availableBalance}}</h2>
+                    <p class="card-text">Available Balance</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <a href="order">
+                <div class="card stat-rev-card card_bcg" type="button" (click)="navigateToTab(0)">
+                    <div class="card-body">
+                        <img src="../../../assets/icons/vial-circle-check-solid.svg">
+                        <h2 class="card-title">{{completedTest}}</h2>
+                        <p class="card-text">Tests Completed</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a href="order">
+                <div class="card stat-rev-card card_bcg" type="button" (click)="navigateToTab(1)">
+                    <div class="card-body">
+                        <img src="../../../assets/icons/vial-solid.svg">
+                        <h2 class="card-title">{{inProgressTest}}</h2>
+                        <p class="card-text">Tests In Progress</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a href="order">
+                <div class="card stat-rev-card card_bcg" type="button" (click)="navigateToTab(2)">
+                    <div class="card-body">
+                        <img src="../../../assets/icons/vial-virus-solid.svg">
+                        <h2 class="card-title">{{pendingTest}}</h2>
+                        <p class="card-text">Tests Pending</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div>
+        <mat-tab-group [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+            <mat-tab label="All Time">
+                <ag-grid-angular class="ag-theme-alpine table-body" [rowData]="rowData" [columnDefs]="columnDefs"
+                    [defaultColDef]="defaultColDef"></ag-grid-angular>
+            </mat-tab>
+            <mat-tab label="Last Financial Year">
+                <ag-grid-angular class="ag-theme-alpine table-body" [rowData]="rowData" [columnDefs]="columnDefs"
+                    [defaultColDef]="defaultColDef"></ag-grid-angular>
+            </mat-tab>
+            <mat-tab label="Current Financial Year">
+                <ag-grid-angular class="ag-theme-alpine table-body" [rowData]="rowData" [columnDefs]="columnDefs"
+                    [defaultColDef]="defaultColDef"></ag-grid-angular>
+            </mat-tab>
+            <mat-tab label="Last Month">
+                <ag-grid-angular class="ag-theme-alpine table-body" [rowData]="rowData" [columnDefs]="columnDefs"
+                    [defaultColDef]="defaultColDef"></ag-grid-angular>
+            </mat-tab>
+            <mat-tab label="Current Month">
+                <ag-grid-angular class="ag-theme-alpine table-body" [rowData]="rowData" [columnDefs]="columnDefs"
+                    [defaultColDef]="defaultColDef"></ag-grid-angular>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

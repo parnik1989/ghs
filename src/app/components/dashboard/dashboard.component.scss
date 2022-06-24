@@ -1,0 +1,48 @@
+.stat-rev-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 50px;
+}
+.row {
+    padding: 0% 3%;
+}
+
+.card_bcg {
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #298ca3);
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 12px 5px -10px rgb(0 0 0 / 10%), 0 0 4px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 12px 5px -10px rgb(0 0 0 / 10%), 0 0 4px 0 rgb(0 0 0 / 10%);
+    margin-bottom: 30px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.card-title {
+    color: white;
+}
+
+p{
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card-body {
+    color:black
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.table-body {
+    height: 460px;
+}
+
+

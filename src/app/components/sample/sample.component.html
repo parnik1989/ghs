@@ -1,0 +1,33 @@
+<div class="order-header">
+  <h1>Add Test & Sample Details</h1>
+</div>
+<div class="form-container">
+  <form class="row g-3 modal-body" #addData=ngForm (ngSubmit)="addSample()">
+    <div class="col-md-12">
+      <label for="testName" class="form-label">Test / Package Name</label>
+      <select name="testName" [(ngModel)]="testData" class="form-control" (change)="populateSampleType(testData)">
+        <option *ngFor="let testData of testTypeDataList" [ngValue]="testData">{{ testData.testCode }} - {{
+          testData.testName }}</option>
+      </select>
+      <p *ngIf="!testDataSelected">Please select a test or package name to proceed</p>
+    </div>
+    <div *ngFor="let sampleType of sampleTypes; let i= index">
+      <div class="col-md-12">
+        <label for="barcode" class="form-label">{{sampleType.sampleName}}</label>
+        <input id="i" type="text" class="form-control" name="barcode" [(ngModel)]="sampleBarcode" required
+          placeholder="Barcode" (ngModelChange)="checkBarcode($event)">
+      </div>
+    </div>
+    <div class="col-md-12" *ngIf="testDataSelected">
+      <label for="details" class="form-label">Amount</label>
+      <input type="text" class="form-control" name="details" [(ngModel)]="amount" [readonly]="true" required>
+    </div>
+    <hr>
+    <div class="col-md-5 button-align">
+      <button class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </div>
+    <div class="col-md-5 button-align">
+      <button class="btn btn-primary" (click)="addSample()" cdkFocusInitial [disabled]="completed">Add Details</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,42 @@
+.dropdown-menu {
+    background-color: #298ca3;
+    border: none;
+}
+img {
+    width: 30px;
+}
+
+.header {
+    background-color: #298ca3;
+}
+
+.nav-link {
+    color: white;
+    font-size: 20px;
+}
+.nav-item {
+    padding: 0% 3%;
+}
+
+.navbar-toggler {
+    border: 1px solid #298ca3;
+    padding: 0px;
+    font-size: 0px;
+    line-height: 0;
+    background-color: transparent;
+    border-radius: 0.25rem;
+    transition: box-shadow 0.15s ease-in-out;
+}
+.bar {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+@media only screen and (min-width:992px) {
+    img {
+        width: 2%;
+    }
+}

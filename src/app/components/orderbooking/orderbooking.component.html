@@ -1,0 +1,77 @@
+<div class="order-header">
+    <h1>Create New Order</h1>
+</div>
+<div class="form-container">
+    <form class="row g-3" #orderForm=ngForm (ngSubmit)="submitOrder()">
+        <div class="col-md-6">
+            <label for="patientName" class="form-label">Patient Name</label>
+            <input type="text" class="form-control" name="patientName" [(ngModel)]="order.patientName" required (ngModelChange)="validateInputs()">
+        </div>
+        <div class="col-md-6">
+            <label for="patientGender" class="form-label">Patient Gender</label>
+            <input type="text" class="form-control" name="patientGender" [(ngModel)]="order.patientGender"  required (ngModelChange)="validateInputs()">
+        </div>
+        <div class="col-md-6">
+            <label for="patientAge" class="form-label">Patient Age</label>
+            <div class="input-group">
+                <span class="input-group-text">Year</span>
+                <input type="text" class="form-control" name="patientAge" [(ngModel)]="order.patientAge" required (ngModelChange)="validateInputs()">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="patientPhone" class="form-label">Patient Phone</label>
+            <input type="text" class="form-control" name="patientPhone" [(ngModel)]="order.patientPhone" required (ngModelChange)="validateInputs()">
+        </div>
+        <div class="col-md-6">
+            <label for="doctorName" class="form-label">Doctor Name</label><span class="plus-icon" (click)="openAddDoctor()"> + Add Doctor</span>
+            <select class="form-select" name="doctorName" [(ngModel)]="order.doctorName" required (ngModelChange)="validateInputs()">
+                <option *ngFor="let doctorData of doctorDetailList" [ngValue]="doctorData">{{ doctorData.doctorName }} - {{ doctorData.doctorLocation }}</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="labName" class="form-label">Lab Name</label><span class="plus-icon" (click)="openAddLab()"> + Add Lab</span>
+            <select class="form-select" name="labName" [(ngModel)]="order.labName" required (ngModelChange)="validateInputs()">
+                <option *ngFor="let labData of labDetailList" [ngValue]="labData">{{ labData.labName }} - {{ labData.labLocation }}</option>
+            </select>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label">Test & Sample Details</label> <span class="plus-icon" (click)="openAddSample()"> + Add Test / Package</span>
+            <table class="table table-responsive">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Barcode</th>
+                    <th scope="col">Type</th>
+                    <th scope="col"></th>
+                </tr>
+                <tr *ngFor="let testDetail of testDetailsList; let i= index;" >
+                    <td scope="row">{{testDetail.testName}}</td>
+                    <td>{{testDetail.amount}}</td>
+                    <table>
+                        <tr *ngFor="let sampleType of testDetail.sampleTypes; let j= index;" style="border: none !important;">
+                            <td>{{sampleType.sampleName}}</td>
+                            <td>&nbsp;&nbsp;</td>
+                            <td>{{sampleType.sampleBarcode}}</td>
+                        </tr>
+                    </table>
+                    <td>
+                        <span type="button" (click)="deleteRow(i)"> <img src = "../../../assets/icons/trash-can-solid.svg">  </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="col-md-12">
+            <span>Total Amount : </span>
+            <span>{{totalAmount}}</span>
+        </div>
+        <hr>
+        <div class="col-md-6 button-align">
+            <button class="btn btn-secondary" type="submit">Cancel</button>
+        </div>
+        <div class="col-md-6 button-align">
+            <button class="btn btn-primary" type="submit" [disabled]="completed">Submit form</button>
+        </div>
+
+    </form>
+</div>
